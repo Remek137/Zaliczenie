@@ -1,9 +1,9 @@
 package pl.gda.wsb;
 
-public class motorcycle extends Vehicle implements Czynnosci{
+public class Motorcycle extends Vehicle implements Actions {
 
 
-    public motorcycle(String registrationNumber, int VIN, String color, Double price, Double fuelBurn, Double gasTankState, int mileage, Double maxGasTankStateAmount) {
+    public Motorcycle(String registrationNumber, int VIN, String color, Double price, Double fuelBurn, Double gasTankState, int mileage, Double maxGasTankStateAmount) {
         super(registrationNumber, VIN, color, price, fuelBurn, gasTankState, mileage, maxGasTankStateAmount);
     }
 

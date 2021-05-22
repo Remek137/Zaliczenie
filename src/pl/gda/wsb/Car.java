@@ -1,6 +1,6 @@
 package pl.gda.wsb;
 
-public class Car extends Vehicle implements Czynnosci{
+public class Car extends Vehicle implements Actions {
     int doorAmount;
 
     public Car(String registrationNumber, int VIN, String color, Double price, Double fuelBurn, Double gasTankState, int mileage, int doorAmount, Double maxGasTankStateAmount) {

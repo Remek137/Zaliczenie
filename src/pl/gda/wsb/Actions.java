@@ -1,6 +1,6 @@
 package pl.gda.wsb;
 
-public interface Czynnosci {
+public interface Actions {
 
     public void drive(int kilometersToGo);
 
