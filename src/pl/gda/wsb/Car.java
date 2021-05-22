@@ -21,7 +21,11 @@ public class Car extends Vehicle implements Czynnosci{
         else System.out.println("Nie można przejechać tyle km, nie starczy paliwa!");
     }
 
-    public void refuel(){
+    public void refuel(Double fuelAmount){
+        System.out.println("Przed zatankowaniem: " + this.gasTankState);
+        this.gasTankState += fuelAmount;
+        System.out.println("Zatankowano: " + fuelAmount + " litrów");
+        System.out.println("aktualnie bak posiada: " + this.gasTankState + " litrów");
     }
 
     public Double distance(){

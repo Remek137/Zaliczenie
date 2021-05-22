@@ -4,7 +4,7 @@ public interface Czynnosci {
 
     public void drive(int kilometersToGo);
 
-    public void refuel();
+    public void refuel(Double fuelAmount);
 
     public Double distance();
 }
