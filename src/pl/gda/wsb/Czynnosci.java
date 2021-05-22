@@ -7,4 +7,6 @@ public interface Czynnosci {
     public void refuel(Double fuelAmount);
 
     public Double distance();
+
+    public void paint(String color);
 }

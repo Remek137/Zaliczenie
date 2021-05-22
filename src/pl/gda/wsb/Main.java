@@ -7,5 +7,6 @@ public class Main {
     System.out.println(car1.distance());
     car1.drive(700);
     car1.refuel(40.00);
+    car1.paint("blue");
     }
 }

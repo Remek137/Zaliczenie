@@ -32,8 +32,14 @@ public class motorcycle extends Vehicle implements Czynnosci{
     }
 
     public Double distance(){
-        {
-            return (this.gasTankState*100.00)/this.fuelBurn;
-        }
+        return (this.gasTankState*100.00)/this.fuelBurn;
+    }
+
+    public void paint(String color){
+        System.out.println("Przemalowano z koloru: " + this.color + " na kolor: " + color);
+        this.color = color;
+        System.out.println("Cena wzrozła z: " + this.price);
+        this.price = this.price * 1.05;
+        System.out.println("Na: " + this.price);
     }
 }
