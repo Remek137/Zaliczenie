@@ -3,8 +3,8 @@ package pl.gda.wsb;
 public class motorcycle extends Vehicle implements Czynnosci{
 
 
-    public motorcycle(String registrationNumber, int VIN, String color, Double price, Double fuelBurn, Double gasTankState, int mileage) {
-        super(registrationNumber, VIN, color, price, fuelBurn, gasTankState, mileage);
+    public motorcycle(String registrationNumber, int VIN, String color, Double price, Double fuelBurn, Double gasTankState, int mileage, Double maxGasTankStateAmount) {
+        super(registrationNumber, VIN, color, price, fuelBurn, gasTankState, mileage, maxGasTankStateAmount);
     }
 
     public void drive(int kilometersToGo){
@@ -23,8 +23,12 @@ public class motorcycle extends Vehicle implements Czynnosci{
     public void refuel(Double fuelAmount){
         System.out.println("Przed zatankowaniem: " + this.gasTankState);
         this.gasTankState += fuelAmount;
-        System.out.println("Zatankowano: " + fuelAmount + " litrów");
-        System.out.println("aktualnie bak posiada: " + this.gasTankState + " litrów");
+        if (this.gasTankState > this.maxGasTankStateAmount)
+        {
+            System.out.println("Zatankowano do pełna, więcej się nie dało!");
+            this.gasTankState = maxGasTankStateAmount;
+        }
+        System.out.println("Aktualnie bak posiada: " + this.gasTankState + " litrów");
     }
 
     public Double distance(){

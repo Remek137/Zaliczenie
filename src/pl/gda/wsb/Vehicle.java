@@ -7,9 +7,10 @@ public abstract class Vehicle {
     Double price;
     Double fuelBurn;
     Double gasTankState;
+    Double maxGasTankStateAmount;
     int mileage;
 
-    public Vehicle(String registrationNumber, int VIN, String color, Double price, Double fuelBurn, Double gasTankState, int mileage) {
+    public Vehicle(String registrationNumber, int VIN, String color, Double price, Double fuelBurn, Double gasTankState, int mileage, Double maxGasTankStateAmount) {
         this.registrationNumber = registrationNumber;
         this.VIN = VIN;
         this.color = color;
@@ -17,5 +18,6 @@ public abstract class Vehicle {
         this.fuelBurn = fuelBurn;
         this.gasTankState = gasTankState;
         this.mileage = mileage;
+        this.maxGasTankStateAmount = maxGasTankStateAmount;
     }
 }
