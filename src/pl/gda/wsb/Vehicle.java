@@ -1,11 +1,11 @@
 package pl.gda.wsb;
 
 public abstract class Vehicle {
-    String nrRejestracyjny;
-    Long nrVIN;
+    String registrationNumber;
+    Long VIN;
     String color;
     Double price;
-    Double spalanie;
+    Double fuelBurn;
     String gasTankState;
     int mileage;
 }
