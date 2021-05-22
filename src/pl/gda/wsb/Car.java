@@ -8,17 +8,25 @@ public class Car extends Vehicle implements Czynnosci{
         this.doorAmount = doorAmount;
     }
 
-    public void drive(){
-        System.out.println("Pojechano");
+    public void drive(int kilometersToGo){
+        if(kilometersToGo <= this.distance()) {
+            System.out.println("Pojechano: " + kilometersToGo + "km");
+            System.out.println(this.mileage);
+            this.mileage += this.gasTankState*100.00/this.fuelBurn;
+            System.out.println(this.mileage);
+            System.out.println(this.gasTankState);
+            this.gasTankState -= (kilometersToGo/100)*this.fuelBurn;
+            System.out.println(this.gasTankState);
+        }
+        else System.out.println("Nie można przejechać tyle km, nie starczy paliwa!");
     }
 
     public void refuel(){
-        System.out.println("Pojechano");
     }
 
-    public void distance(){
-    if(this.gasTankState > this.fuelBurn){
-        System.out.println("Ten samochód przejedzie: " + (gasTankState*100.00)/fuelBurn + "km");
+    public Double distance(){
+    {
+        return (this.gasTankState*100.00)/this.fuelBurn;
     }
     }
 }

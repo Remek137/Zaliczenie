@@ -8,7 +8,7 @@ public class Truck extends Vehicle implements Czynnosci{
         this.load = load;
     }
 
-    public void drive(){
+    public void drive(int kilometersToGo){
         System.out.println("Pojechano");
     }
 
@@ -16,9 +16,10 @@ public class Truck extends Vehicle implements Czynnosci{
         System.out.println("Pojechano");
     }
 
-    public void distance(){
-        if(this.gasTankState > this.fuelBurn){
-            System.out.println("Ta ciężarówka przejedzie: " + (gasTankState*100.00)/fuelBurn + "km");
+    public Double distance(){
+        {
+            System.out.println("Ten samochód przejedzie: " + (this.gasTankState*100.00)/this.fuelBurn + "km");
+            return (this.gasTankState*100.00)/this.fuelBurn;
         }
     }
 }

@@ -2,9 +2,9 @@ package pl.gda.wsb;
 
 public interface Czynnosci {
 
-    public void drive();
+    public void drive(int kilometersToGo);
 
     public void refuel();
 
-    public void distance();
+    public Double distance();
 }

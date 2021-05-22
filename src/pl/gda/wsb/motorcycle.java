@@ -7,7 +7,7 @@ public class motorcycle extends Vehicle implements Czynnosci{
         super(registrationNumber, VIN, color, price, fuelBurn, gasTankState, mileage);
     }
 
-    public void drive(){
+    public void drive(int kilometersToGo){
         System.out.println("Pojechano");
     }
 
@@ -15,9 +15,10 @@ public class motorcycle extends Vehicle implements Czynnosci{
         System.out.println("Pojechano");
     }
 
-    public void distance(){
-        if(this.gasTankState > this.fuelBurn){
-            System.out.println("Ten motocykl przejedzie: " + (gasTankState*100.00)/fuelBurn + "km");
+    public Double distance(){
+        {
+            System.out.println("Ten samochód przejedzie: " + (this.gasTankState*100.00)/this.fuelBurn + "km");
+            return (this.gasTankState*100.00)/this.fuelBurn;
         }
     }
 }
