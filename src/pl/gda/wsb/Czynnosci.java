@@ -2,7 +2,9 @@ package pl.gda.wsb;
 
 public interface Czynnosci {
 
-    public void jedz();
+    public void drive();
 
-    public void tankuj();
+    public void refuel();
+
+    public void distance();
 }
